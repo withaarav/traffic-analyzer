@@ -74,6 +74,8 @@ python main.py
 
 You'll be prompted to enter a video number (1–7). The model (`yolov8m.pt`) downloads automatically on first run via Ultralytics.
 
+Or use pycharm to clone the repository if this shows error.
+
 ---
 
 ## 💡 How It Works
