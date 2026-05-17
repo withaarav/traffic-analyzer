@@ -108,12 +108,7 @@ video_files = {1: "traffic(1).mp4", 2: "traffic(2).mp4", 3: "traffic(3).mp4",
 cap2 = cv2.VideoCapture(video_files.get(vid, "traffic(7).mp4"))
 success2, sample_frame = cap2.read()
 print("Frame read success:", success2)
-
-if not success2 or sample_frame is None:
-    print("Could not read sample frame — using blank background for heatmap overlay.")
-    sample_frame = np.zeros((720, 1280, 3), dtype=np.uint8)
-else:
-    sample_frame = cv2.resize(sample_frame, (1280, 720))
+sample_frame = cv2.resize(sample_frame, (1280, 720))
 cap2.release()
 
 # Blend
